@@ -4,13 +4,13 @@
 # Main Image Partitions
 /system_image       emmc      /dev/block/bootdevice/by-name/system			                            flags=display="System Image";backup=1;flashimg=1;
 /vendor_image       emmc      /dev/block/bootdevice/by-name/vendor			                            flags=display="Vendor Image";backup=1;flashimg=1;
-/systemext_image    emmc      /dev/block/bootdevice/by-name/system_ext			                     	    flags=display="System_Ext Image";backup=1;flashimg=1;
-/product_image      emmc      /dev/block/bootdevice/by-name/product                                 		    flags=display="Product Image";backup=1;flashimg=1;
+/systemext_image    emmc      /dev/block/bootdevice/by-name/system_ext			                     	  flags=display="System_Ext Image";backup=1;flashimg=1;
+/product_image      emmc      /dev/block/bootdevice/by-name/product                                 flags=display="Product Image";backup=1;flashimg=1;
 
 # Other Partitions
 /system	            ext4   	  /dev/block/bootdevice/by-name/system                                  flags=display="System";wipeingui;
 /vendor             ext4   	  /dev/block/bootdevice/by-name/vendor                                  flags=display="Vendor";wipeingui;
-/system_ext         ext4      /dev/block/bootdevice/by-name/system_ext                              flags=display="System_ext";wipeingui;
+/system_ext         ext4      /dev/block/bootdevice/by-name/system_ext                              flags=display="System_Ext";wipeingui;
 /product            ext4      /dev/block/bootdevice/by-name/product                                 flags=display="Product";wipeingui;
 
 
@@ -47,4 +47,4 @@
 
 # External Storage
 /external_sd        auto      /dev/block/mmcblk1p1   /dev/block/mmcblk1 	     					            flags=display="Micro SD card";storage;wipeingui;removable
-/usb-otg            auto      /dev/block/sda1 /dev/block/sda2     /dev/block/sda                    				      flags=display="USB OTG";storage;wipeingui;removable;fsflags="utf8"
+/usb-otg            auto      /dev/block/sda1 /dev/block/sda2     /dev/block/sda                    flags=display="USB OTG";storage;wipeingui;removable;fsflags="utf8"
