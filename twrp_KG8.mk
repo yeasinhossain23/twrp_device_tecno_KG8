@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
-# Inherit from neon device
+# Inherit from KG8 device
 $(call inherit-product, device/tecno/KG8/device.mk)
 
 # Inherit some common TWRP stuff.
