@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/tecno/neon
+DEVICE_PATH := device/tecno/KG8
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -26,7 +26,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := neon
+TARGET_OTA_ASSERT_DEVICE := KG8
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := CY-KG8-H698-C
@@ -149,7 +149,7 @@ RECOVERY_SDCARD_ON_DATA := true
 TARGET_USES_MKE2FS := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
-TW_DEFAULT_BRIGHTNESS := 1200
+TW_DEFAULT_BRIGHTNESS := 500
 TW_MAX_BRIGHTNESS := 2047
 TW_INCLUDE_DEFAULT_USB_INIT := true
 TW_INCLUDE_PYTHON := true
@@ -157,7 +157,7 @@ TW_INCLUDE_NANO := true
 TW_INCLUDE_APEX := true
 TW_EXCLUDE_TWRPAPP := true
 TW_EXTRA_LANGUAGES := false
-TW_INCLUDE_NTFS_3G := true
+TW_INCLUDE_NTFS_3G := false
 TW_NO_SCREEN_BLANK := true
 TW_USE_TOOLBOX := true
 TW_SCREEN_BLANK_ON_BOOT := true
@@ -165,6 +165,11 @@ TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_REPACKTOOLS := true
 TW_HAS_MTP := true
 TW_FRAMERATE := 60
+TW_INCLUDE_FB2PNG := false
+TW_EXCLUDE_TZDATA := true
+TW_NO_CPU_TEMP := true
+TW_HAS_DOWNLOAD_MODE := false
+TW_NO_HAPTICS := true
 
 # Debug
 TWRP_INCLUDE_LOGCAT := true
@@ -172,6 +177,6 @@ TARGET_USES_LOGD := true
 
 # StatusBar
 TW_STATUS_ICONS_ALIGN := center
-TW_CUSTOM_CPU_POS := "250"
+#TW_CUSTOM_CPU_POS := "250"
 TW_CUSTOM_CLOCK_POS := "50"
 TW_CUSTOM_BATTERY_POS := "800"
